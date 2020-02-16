@@ -168,6 +168,6 @@ for root, dirs, files in os.walk(directory, topdown=True):
 
         if len(table_titles[-1]) > 120:
             table_titles[-1] = table_titles[-1][0:120]
-        dftable = pd.DataFrame(data)
+        dftable = pd.DataFrame(data) 
         csv_path = folder_path() + f"/{table_titles[-1]}.csv"
         dftable.to_csv(csv_path, index=False, header=False, encoding='utf-8-sig')
